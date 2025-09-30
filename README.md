@@ -1,10 +1,7 @@
 # in-class-activities
 ## Devlogs
 ### W1
-Hello World
-
-### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+Attached player component into a cat object to give it ability to move with AWSD. Relocate cat object to new starting point  
 
 ## Open-Source Assets
 ### W1
