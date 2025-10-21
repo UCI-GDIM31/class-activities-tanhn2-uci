@@ -6963,8 +6963,8 @@ GameObject:
   - component: {fileID: 6020308597634792877}
   - component: {fileID: 6397291155275392794}
   - component: {fileID: 6397291155275392798}
-  - component: {fileID: 6397291155275392800}
   - component: {fileID: 6397291155275392799}
+  - component: {fileID: 6397291155275392800}
   - component: {fileID: 6397291155275392801}
   m_Layer: 0
   m_Name: Cat
@@ -7014,7 +7014,30 @@ MonoBehaviour:
   _jumpForce: 5
   _rigidBody: {fileID: 0}
   _animator: {fileID: 6397291155275392794}
---- !u!54 &6397291155275392799
+--- !u!136 &6397291155275392799
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397291155275392791}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.21
+  m_Height: 0.08
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.17, z: 0}
+--- !u!54 &6397291155275392800
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7041,29 +7064,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!136 &6397291155275392800
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6397291155275392791}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.14
-  m_Height: 0.45
-  m_Direction: 2
-  m_Center: {x: 0, y: 0.14, z: 0}
 --- !u!114 &6397291155275392801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7076,7 +7076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d99774276e3f43b192a53df5fde03de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BounceOffWall
-  _rigidBody: {fileID: 6397291155275392799}
+  _rigidBody: {fileID: 6397291155275392800}
   _bounceForce: 6
 --- !u!1 &6499904795538962815
 GameObject:
@@ -7344,8 +7344,8 @@ GameObject:
   - component: {fileID: 6307793460636747710}
   - component: {fileID: 8101201615804560244}
   - component: {fileID: 8101201615804560248}
-  - component: {fileID: 8101201615804560250}
   - component: {fileID: 8101201615804560249}
+  - component: {fileID: 8101201615804560250}
   - component: {fileID: 8101201615804560251}
   m_Layer: 0
   m_Name: SoccerBall
@@ -7433,7 +7433,28 @@ MonoBehaviour:
   _pointsText: {fileID: 1584363612}
   _timeText: {fileID: 109916336}
   _goalVFX: {fileID: 67938281}
---- !u!54 &8101201615804560249
+--- !u!135 &8101201615804560249
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7741058300408910497}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.07068241
+  m_Center: {x: -0.000056624413, y: 0.00011789426, z: 0.00046431273}
+--- !u!54 &8101201615804560250
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7460,27 +7481,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &8101201615804560250
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7741058300408910497}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.07068241
-  m_Center: {x: -0.000056624413, y: 0.00011789426, z: 0.00046431273}
 --- !u!114 &8101201615804560251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7493,7 +7493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d99774276e3f43b192a53df5fde03de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BounceOffWall
-  _rigidBody: {fileID: 8101201615804560249}
+  _rigidBody: {fileID: 8101201615804560250}
   _bounceForce: 6
 --- !u!4 &8115783459852817865
 Transform:

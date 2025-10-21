@@ -7,6 +7,8 @@ public class SoccerBall : MonoBehaviour
     [SerializeField] private TMP_Text _pointsText;
     [SerializeField] private TMP_Text _timeText;
     [SerializeField] private ParticleSystem _goalVFX;
+    private int points = 0;
+    private float time = 0.0f;
 
     // STEP 1 -----------------------------------------------------------------
     // The OnTriggerEnter method is a collision method called by Unity that
@@ -21,11 +23,13 @@ public class SoccerBall : MonoBehaviour
     //
     // Also, uncomment and FIX the Debug.Log line.
 
-    //private ?? ??
-    //{
+    private void OnTriggerEnter(Collider collision)
+    {
         // finish STEP 1 by uncommenting and fixing the below line!
-        //Debug.Log(SoccerBall detected a collision with a trigger collider!);
 
+        if(collision.gameObject.tag == "Goal"){
+            MadeGoal();
+        }
         // STEP 2 -------------------------------------------------------------
         // Write an IF STATEMENT to check if the game object we collided with
         //      has the tag "Goal".
@@ -36,7 +40,7 @@ public class SoccerBall : MonoBehaviour
 
 
         // STEP 2 -------------------------------------------------------------
-    //}
+    }
 
     // STEP 1 -----------------------------------------------------------------
 
@@ -49,7 +53,13 @@ public class SoccerBall : MonoBehaviour
     // Once you've created MadeGoal,
     //      move your Debug.Log() statement into MadeGoal, and
     //      call MadeGoal from inside your if statement in OnTriggerEnter.
-    
+    void MadeGoal(){
+        Debug.Log("SoccerBall detected a collision with a trigger collider!");
+        points++;
+        _pointsText.text = "Points: " + points.ToString();
+        time = 0;
+        _goalVFX.Play();
+    }
         // STEP 4 -------------------------------------------------------------
         // _goalVFX is a ParticleSystem, a Component for creating VFX.
         // ParticleSystem has a method named Play() that displays the VFX:
@@ -79,7 +89,10 @@ public class SoccerBall : MonoBehaviour
     //
     // STEP 5 -----------------------------------------------------------------
     
-
+    void Update(){
+        time += Time.deltaTime;
+        _timeText.text = "Time since last goal: " + time.ToString();
+    }
     // STEP 6 -----------------------------------------------------------------
     // Like the last step, these flags do NOT show you where to put all of the
     //      code that you need to write.

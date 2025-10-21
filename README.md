@@ -14,6 +14,14 @@ Attached player component into a cat object to give it ability to move with AWSD
 Table #12: Our method would take two parameters. The first parameter. The first parameter would be int type would take how closed is this relationship based on number and the second parameter is boolean to detemrine whether or not character know secret. And the return type for this method will be string type which is a text response. 
 
 Think of a class as a blueprint for a robot in a robot factory. The blueprint defines what parts the robot has and what tasks it can perform, but it isn’t an actual robot yet. When you use that blueprint to build a real robot, that robot becomes a Component. The member variables are the robot’s traits or features like its color, size, or battery capacity These can differ from one robot to another, even if they come from the same blueprint. The methods are the robot’s abilities or actions, such as walking, talking, or picking up objects. These are the things every robot built from that blueprint knows how to do.
+
+### W4
+Line 17: _isGrounded is a member variable of CatW4, and the type is boolean. We set this member variable to true because we want player's character would be on the ground when starting the game.
+Line 28: This line of code would check whether or not player hit the space and whether or not character is on the ground. If both of conditions are true, below block of code will execute.
+Line 32: This line of code is set a member variable _isGrounded to false to prevent chacracter that jump while in the air.
+
+1. The solution I came up with the activity was Rigidbody added into cat and soccer ball object. And Is Trigger checked on a goal.
+2. I had an issue when my cat object kick the ball and cat started rolling. I fixed it by checking the freeze rotation on X and Z
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
