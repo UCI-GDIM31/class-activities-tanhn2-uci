@@ -22,6 +22,10 @@ Line 32: This line of code is set a member variable _isGrounded to false to prev
 
 1. The solution I came up with the activity was Rigidbody added into cat and soccer ball object. And Is Trigger checked on a goal.
 2. I had an issue when my cat object kick the ball and cat started rolling. I fixed it by checking the freeze rotation on X and Z
+
+### W5 
+1. How does GetComponent() method work ? -> is a method that looks for a component of specify type attached to the same GameObject and returns it.
+2. DeerW5 class will need a Transform _destination object and NavMeshAgent object as a member variable. A method might need for this class is update() method. This update() method will call every frame and transform a Deer object position to target object.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

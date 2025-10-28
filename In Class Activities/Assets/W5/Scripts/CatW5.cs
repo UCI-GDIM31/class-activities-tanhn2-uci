@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class CatW5 : MonoBehaviour
@@ -51,7 +52,16 @@ public class CatW5 : MonoBehaviour
 
         float rotation = Input.GetAxis("Horizontal") * _turnSpeed * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
-
+        float movement = Input.GetAxis("Vertical");
+        if (!_flipWSControls)
+        {
+            translation.z = movement;
+            transform.Translate(translation * _moveSpeed * Time.deltaTime);
+        } else
+        {
+            translation.z = movement * -1;
+            transform.Translate(translation * _moveSpeed * Time.deltaTime);
+        }
         if (translation.magnitude != 0.0f || rotation != 0.0f)
         {
             _animator.SetBool(_isWalkingName, true);
