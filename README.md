@@ -26,6 +26,13 @@ Line 32: This line of code is set a member variable _isGrounded to false to prev
 ### W5 
 1. How does GetComponent() method work ? -> is a method that looks for a component of specify type attached to the same GameObject and returns it.
 2. DeerW5 class will need a Transform _destination object and NavMeshAgent object as a member variable. A method might need for this class is update() method. This update() method will call every frame and transform a Deer object position to target object.
+
+### W6
+Inherite MonoBehaviour 
+Speed variable with SerializeField
+We need Start and Update method
+
+Unity Coding [In-class Activity](https://docs.google.com/document/d/1wrY73yJ_km0ig2SehlUSuSx3rOOu84QnORwQ0mV305o/edit?tab=t.0)
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
