@@ -33,6 +33,11 @@ Speed variable with SerializeField
 We need Start and Update method
 
 Unity Coding [In-class Activity](https://docs.google.com/document/d/1wrY73yJ_km0ig2SehlUSuSx3rOOu84QnORwQ0mV305o/edit?tab=t.0)
+
+### W7 
+Physics and Gameplay [In-class Activity](https://docs.google.com/document/d/12FkLu3TyiaSycwzMFiDzaApR5NOht5-WelRo95wzODg/edit?tab=t.0)
+
+In step #2, When directly adding to transform.position, the character moves along the world space Z axis rather than its local forward direction. This is because Vector3.forward is a static vector constant that always points in the global z axis, regardless of the GameObject's rotation.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
